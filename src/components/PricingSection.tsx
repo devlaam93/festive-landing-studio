@@ -77,15 +77,19 @@ const PricingSection = () => {
     <section id="pricing" className="py-20 md:py-32 relative">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
+      
+      {/* Decorative elements */}
+      <div className="absolute top-20 left-10 text-4xl opacity-20 animate-float">🎄</div>
+      <div className="absolute bottom-20 right-10 text-4xl opacity-20 animate-float" style={{ animationDelay: '-3s' }}>🎁</div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black mb-6">
-            Choose Your <span className="text-gradient-primary">Plan</span>
+            Unwrap Your <span className="text-christmas-red">Perfect Plan</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            12-month and 24-month IPTV subscriptions in Canada, all including 4K streaming, 
+            🎄 12-month and 24-month IPTV subscriptions in Canada, all including 4K streaming, 
             catch-up TV, VOD, and a wide selection of live channels.
           </p>
         </div>
@@ -99,7 +103,7 @@ const PricingSection = () => {
 
         {/* Trust Badges */}
         <div className="mt-16 text-center">
-          <p className="text-sm text-muted-foreground mb-4">Secure & Encrypted Payments</p>
+          <p className="text-sm text-muted-foreground mb-4">🔒 Secure & Encrypted Payments</p>
           <div className="flex items-center justify-center gap-6 opacity-60">
             <div className="w-12 h-8 bg-muted rounded flex items-center justify-center text-xs font-bold">VISA</div>
             <div className="w-12 h-8 bg-muted rounded flex items-center justify-center text-xs font-bold">MC</div>

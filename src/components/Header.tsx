@@ -1,4 +1,4 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Gift } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -16,9 +16,11 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Promo Banner */}
-      <div className="bg-gradient-to-r from-neon-magenta to-neon-cyan py-2 px-4 text-center">
-        <p className="text-xs md:text-sm font-semibold text-background">
-          🔥 CYBER MONDAY SALE — 80% OFF + 1 Month FREE — Limited Time! 🔥
+      <div className="bg-gradient-to-r from-christmas-red via-christmas-red-dark to-christmas-red py-2 px-4 text-center">
+        <p className="text-xs md:text-sm font-semibold text-foreground flex items-center justify-center gap-2">
+          <Gift className="w-4 h-4" />
+          CHRISTMAS SALE — 80% OFF + 1 Month FREE — Limited Time!
+          <Gift className="w-4 h-4" />
         </p>
       </div>
 
@@ -28,10 +30,11 @@ const Header = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <a href="#" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <span className="font-display font-black text-background text-lg">M</span>
+              <div className="w-10 h-10 rounded-lg bg-gradient-christmas flex items-center justify-center relative">
+                <span className="font-display font-black text-foreground text-lg">M</span>
+                <div className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-christmas-gold animate-twinkle" />
               </div>
-              <span className="font-display font-bold text-xl text-gradient-primary hidden sm:block">
+              <span className="font-display font-bold text-xl text-christmas-gold hidden sm:block">
                 MODEIPTV
               </span>
             </a>
@@ -42,7 +45,7 @@ const Header = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
+                  className="text-sm font-medium text-muted-foreground hover:text-christmas-gold transition-colors duration-200"
                 >
                   {link.label}
                 </a>
@@ -53,7 +56,7 @@ const Header = () => {
             <div className="hidden md:block">
               <a href="#pricing">
                 <Button variant="hero" size="lg">
-                  Start Free Trial
+                  🎄 Start Free Trial
                 </Button>
               </a>
             </div>
@@ -76,7 +79,7 @@ const Header = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 py-2"
+                  className="text-sm font-medium text-muted-foreground hover:text-christmas-gold transition-colors duration-200 py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -84,7 +87,7 @@ const Header = () => {
               ))}
               <a href="#pricing">
                 <Button variant="hero" size="lg" className="w-full mt-2">
-                  Start Free Trial
+                  🎄 Start Free Trial
                 </Button>
               </a>
             </nav>

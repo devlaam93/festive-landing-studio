@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Orbitron', 'sans-serif'],
+        display: ['Playfair Display', 'serif'],
         body: ['Inter', 'sans-serif'],
       },
       colors: {
@@ -51,11 +51,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        neon: {
-          cyan: "hsl(var(--neon-cyan))",
-          magenta: "hsl(var(--neon-magenta))",
-          orange: "hsl(var(--neon-orange))",
-          gold: "hsl(var(--neon-gold))",
+        christmas: {
+          red: "hsl(var(--christmas-red))",
+          "red-dark": "hsl(var(--christmas-red-dark))",
+          green: "hsl(var(--christmas-green))",
+          "green-light": "hsl(var(--christmas-green-light))",
+          gold: "hsl(var(--christmas-gold))",
+          "gold-light": "hsl(var(--christmas-gold-light))",
+          cream: "hsl(var(--christmas-cream))",
+          snow: "hsl(var(--christmas-snow))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -84,15 +88,15 @@ export default {
         },
         "glow-pulse": {
           "0%, 100%": { 
-            boxShadow: "0 0 20px hsl(var(--neon-cyan) / 0.5), 0 0 40px hsl(var(--neon-cyan) / 0.3)" 
+            boxShadow: "0 0 20px hsl(var(--christmas-red) / 0.5), 0 0 40px hsl(var(--christmas-red) / 0.3)" 
           },
           "50%": { 
-            boxShadow: "0 0 40px hsl(var(--neon-cyan) / 0.7), 0 0 80px hsl(var(--neon-cyan) / 0.5)" 
+            boxShadow: "0 0 40px hsl(var(--christmas-red) / 0.7), 0 0 80px hsl(var(--christmas-red) / 0.5)" 
           },
         },
         "border-glow": {
-          "0%, 100%": { borderColor: "hsl(var(--neon-cyan))" },
-          "50%": { borderColor: "hsl(var(--neon-magenta))" },
+          "0%, 100%": { borderColor: "hsl(var(--christmas-red))" },
+          "50%": { borderColor: "hsl(var(--christmas-green))" },
         },
         "scale-in": {
           "0%": { transform: "scale(0.9)", opacity: "0" },

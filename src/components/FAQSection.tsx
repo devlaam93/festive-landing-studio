@@ -37,14 +37,18 @@ const FAQSection = () => {
     <section id="faq" className="py-20 md:py-32 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/10 to-background" />
       
+      {/* Decorative elements */}
+      <div className="absolute top-20 left-10 text-3xl opacity-20 animate-float">🎄</div>
+      <div className="absolute bottom-20 right-10 text-3xl opacity-20 animate-float" style={{ animationDelay: '-2s' }}>🎁</div>
+      
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-black mb-6">
-            Frequently Asked <span className="text-gradient-primary">Questions</span>
+            Frequently Asked <span className="text-christmas-green">Questions</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Got questions? We've got answers. If you can't find what you're looking for, 
+            🎅 Got questions? We've got answers. If you can't find what you're looking for, 
             reach out to our 24/7 support team.
           </p>
         </div>
@@ -56,9 +60,9 @@ const FAQSection = () => {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="glass border border-border/50 rounded-xl px-6 data-[state=open]:border-primary/50 transition-colors"
+                className="glass border border-border/50 rounded-xl px-6 data-[state=open]:border-christmas-gold/50 transition-colors"
               >
-                <AccordionTrigger className="text-left font-display font-semibold hover:text-primary transition-colors py-5">
+                <AccordionTrigger className="text-left font-display font-semibold hover:text-christmas-gold transition-colors py-5">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-5">

@@ -56,14 +56,18 @@ const FeaturesSection = () => {
 
   return (
     <section id="features" className="py-20 md:py-32 relative">
+      {/* Decorative elements */}
+      <div className="absolute top-10 right-20 text-3xl opacity-20 animate-float">⭐</div>
+      <div className="absolute bottom-10 left-20 text-3xl opacity-20 animate-float" style={{ animationDelay: '-2s' }}>❄️</div>
+      
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-black mb-6">
-            Why Choose <span className="text-gradient-accent">MODEIPTV?</span>
+            Why Choose <span className="text-christmas-gold">MODEIPTV?</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            We're the top IPTV provider in Canada, offering reliable streaming with high-quality video 
+            🎅 We're the top IPTV provider in Canada, offering reliable streaming with high-quality video 
             that brings your favorite entertainment to life.
           </p>
         </div>
