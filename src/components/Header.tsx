@@ -1,6 +1,7 @@
 import { Menu, X, Gift } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import logo from '@/assets/modeiptv-logo.svg';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,14 +30,12 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-gradient-christmas flex items-center justify-center relative">
-                <span className="font-display font-black text-foreground text-lg">M</span>
-                <div className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-christmas-gold animate-twinkle" />
-              </div>
-              <span className="font-display font-bold text-xl text-christmas-gold hidden sm:block">
-                MODEIPTV
-              </span>
+            <a href="#" className="flex items-center">
+              <img 
+                src={logo} 
+                alt="MODEIPTV Logo" 
+                className="h-10 md:h-12 w-auto"
+              />
             </a>
 
             {/* Desktop Navigation */}
