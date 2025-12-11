@@ -11,6 +11,16 @@ import appleTvLogo from '@/assets/logos/apple-tv.svg';
 import paramountLogo from '@/assets/logos/paramount.svg';
 import peacockLogo from '@/assets/logos/peacock.svg';
 
+// Import channel category images
+import sportsImg from '@/assets/channels/sports.png';
+import moviesImg from '@/assets/channels/movies.png';
+import newsImg from '@/assets/channels/news.png';
+import kidsImg from '@/assets/channels/kids.png';
+import documentaryImg from '@/assets/channels/documentary.png';
+import musicImg from '@/assets/channels/music.png';
+import comedyImg from '@/assets/channels/comedy.png';
+import dramaImg from '@/assets/channels/drama.png';
+
 const platforms = [
   { name: 'Netflix', logo: netflixLogo },
   { name: 'Prime Video', logo: primeVideoLogo },
@@ -23,14 +33,14 @@ const platforms = [
 ];
 
 const channels = [
-  { name: 'Sports', emoji: '⚽', count: '500+' },
-  { name: 'Movies', emoji: '🎬', count: '60K+' },
-  { name: 'News', emoji: '📰', count: '200+' },
-  { name: 'Kids', emoji: '🧸', count: '300+' },
-  { name: 'Documentary', emoji: '🎥', count: '400+' },
-  { name: 'Music', emoji: '🎵', count: '150+' },
-  { name: 'Comedy', emoji: '😂', count: '250+' },
-  { name: 'Drama', emoji: '🎭', count: '1000+' },
+  { name: 'Sports', image: sportsImg, count: '500+' },
+  { name: 'Movies', image: moviesImg, count: '60K+' },
+  { name: 'News', image: newsImg, count: '200+' },
+  { name: 'Kids', image: kidsImg, count: '300+' },
+  { name: 'Documentary', image: documentaryImg, count: '400+' },
+  { name: 'Music', image: musicImg, count: '150+' },
+  { name: 'Comedy', image: comedyImg, count: '250+' },
+  { name: 'Drama', image: dramaImg, count: '1000+' },
 ];
 
 const ChannelCarousel = () => {
@@ -105,11 +115,17 @@ const ChannelCarousel = () => {
             {duplicatedChannels.map((channel, index) => (
               <div
                 key={`channel-${index}`}
-                className="flex-shrink-0 w-44 h-24 rounded-xl glass border border-border/50 flex flex-col items-center justify-center hover:border-christmas-red/50 transition-all duration-300 hover:scale-105 group"
+                className="flex-shrink-0 w-48 h-32 rounded-xl glass border border-border/50 flex flex-col items-center justify-center hover:border-christmas-red/50 transition-all duration-300 hover:scale-105 group overflow-hidden relative"
               >
-                <span className="text-3xl mb-1 group-hover:scale-125 transition-transform">{channel.emoji}</span>
-                <span className="font-display font-semibold text-sm text-foreground">{channel.name}</span>
-                <span className="text-xs text-christmas-gold">{channel.count} channels</span>
+                <img 
+                  src={channel.image} 
+                  alt={channel.name}
+                  className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity"
+                />
+                <div className="relative z-10 text-center">
+                  <span className="font-display font-bold text-base text-foreground drop-shadow-lg">{channel.name}</span>
+                  <span className="block text-xs text-christmas-gold font-semibold drop-shadow-md">{channel.count} channels</span>
+                </div>
               </div>
             ))}
           </div>
