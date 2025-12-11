@@ -12,53 +12,64 @@ const NetflixIcon = () => (
 );
 
 const PrimeIcon = () => (
-  <div className="flex flex-col items-center">
-    <span className="text-[#00A8E1] font-bold text-lg tracking-tight">prime</span>
-    <span className="text-[#00A8E1] text-xs -mt-1">video</span>
-  </div>
+  <svg viewBox="0 0 100 30" className="w-24 h-7">
+    <text x="0" y="22" className="font-bold" style={{ fontSize: '18px', fill: '#00A8E1', fontFamily: 'Arial' }}>prime</text>
+    <text x="52" y="22" style={{ fontSize: '18px', fill: '#00A8E1', fontFamily: 'Arial' }}>video</text>
+    <path d="M82 24c8-3 14-8 18-14" stroke="#00A8E1" strokeWidth="2" fill="none" strokeLinecap="round"/>
+  </svg>
 );
 
 const DisneyIcon = () => (
-  <div className="flex items-center gap-0.5">
-    <span className="text-[#113CCF] font-display font-black text-xl tracking-tight">Disney</span>
-    <span className="text-[#113CCF] font-bold text-xl">+</span>
-  </div>
+  <svg viewBox="0 0 150 50" className="w-24 h-8">
+    <text x="5" y="35" style={{ fontSize: '32px', fill: '#0057A6', fontFamily: 'serif', fontStyle: 'italic', fontWeight: 'bold' }}>Disney</text>
+    <text x="115" y="35" style={{ fontSize: '32px', fill: '#0057A6', fontFamily: 'Arial', fontWeight: 'bold' }}>+</text>
+  </svg>
 );
 
 const HBOIcon = () => (
-  <div className="flex flex-col items-center">
-    <span className="text-[#B535F6] font-black text-lg tracking-widest">HBO</span>
-    <span className="text-[#B535F6] text-xs font-medium -mt-1">max</span>
-  </div>
+  <svg viewBox="0 0 80 40" className="w-20 h-10">
+    <text x="5" y="22" style={{ fontSize: '20px', fill: '#FFFFFF', fontFamily: 'Arial', fontWeight: 'bold', letterSpacing: '2px' }}>HBO</text>
+    <text x="5" y="36" style={{ fontSize: '14px', fill: '#B535F6', fontFamily: 'Arial', fontWeight: '500' }}>max</text>
+  </svg>
 );
 
 const HuluIcon = () => (
-  <span className="text-[#1CE783] font-black text-2xl tracking-tight lowercase">hulu</span>
+  <svg viewBox="0 0 80 30" className="w-16 h-6">
+    <rect x="0" y="0" width="80" height="30" rx="4" fill="#1CE783"/>
+    <text x="10" y="22" style={{ fontSize: '18px', fill: '#FFFFFF', fontFamily: 'Arial', fontWeight: 'bold', letterSpacing: '1px' }}>hulu</text>
+  </svg>
 );
 
 const AppleTVIcon = () => (
-  <div className="flex items-center gap-1">
-    <svg viewBox="0 0 24 24" className="w-5 h-5" fill="#A2AAAD">
-      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-    </svg>
-    <span className="text-[#A2AAAD] font-medium text-sm">tv+</span>
-  </div>
+  <svg viewBox="0 0 100 30" className="w-20 h-7">
+    <path d="M15 6c-1.5-1.8-3.5-2-4.2-2-.1 0-.2 0-.3 0-1.6.1-3.1 1-4 2.5C5.5 8.2 5 10.5 5 12.5c0 4 2.5 8.5 5 11 1.2 1.2 2.5 2 3.8 2 .7 0 1.3-.2 2-.5.8-.3 1.5-.5 2.2-.5.8 0 1.5.2 2.2.5.7.3 1.3.5 2 .5 1.5 0 2.8-1 4-2.2.7-.8 1.3-1.6 1.8-2.5-2-.9-3.3-3-3.3-5.3 0-2.2 1.2-4.2 3-5.2-.8-1.2-2.3-2.3-4.2-2.3-.7 0-1.5.2-2.2.5-.7.3-1.4.5-2.1.5-.7 0-1.4-.2-2-.5-.5-.2-1.2-.5-2.2-.5z" fill="#A2AAAD"/>
+    <path d="M18 2c-1 1.2-2.5 2-4 2 0-1.5.5-3 1.5-4C16.5.8 17.8.2 19 0c0 .8-.3 1.6-1 2z" fill="#A2AAAD"/>
+    <text x="28" y="20" style={{ fontSize: '14px', fill: '#A2AAAD', fontFamily: 'Arial', fontWeight: '500' }}>tv+</text>
+  </svg>
 );
 
 const ParamountIcon = () => (
-  <div className="flex flex-col items-center">
-    <svg viewBox="0 0 24 24" className="w-6 h-6 mb-0.5" fill="#0064FF">
-      <path d="M12 2L2 12l10 10 10-10L12 2zm0 3l7 7-7 7-7-7 7-7z"/>
-    </svg>
-    <span className="text-[#0064FF] font-bold text-xs">Paramount+</span>
-  </div>
+  <svg viewBox="0 0 120 40" className="w-24 h-8">
+    <path d="M20 35L35 5h10L60 35" fill="none" stroke="#0064FF" strokeWidth="3"/>
+    <path d="M25 25h20" stroke="#0064FF" strokeWidth="3"/>
+    <text x="45" y="28" style={{ fontSize: '12px', fill: '#0064FF', fontFamily: 'Arial', fontWeight: 'bold' }}>Paramount+</text>
+  </svg>
 );
 
 const PeacockIcon = () => (
-  <div className="flex items-center gap-1">
-    <div className="w-5 h-5 rounded-full bg-gradient-to-br from-yellow-400 via-green-400 to-blue-500" />
-    <span className="text-foreground font-bold text-sm">Peacock</span>
-  </div>
+  <svg viewBox="0 0 100 35" className="w-24 h-8">
+    <defs>
+      <linearGradient id="peacockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#FFD700"/>
+        <stop offset="25%" stopColor="#FF6B35"/>
+        <stop offset="50%" stopColor="#E91E63"/>
+        <stop offset="75%" stopColor="#4CAF50"/>
+        <stop offset="100%" stopColor="#2196F3"/>
+      </linearGradient>
+    </defs>
+    <circle cx="12" cy="17" r="10" fill="url(#peacockGrad)"/>
+    <text x="26" y="23" style={{ fontSize: '16px', fill: '#FFFFFF', fontFamily: 'Arial', fontWeight: 'bold' }}>Peacock</text>
+  </svg>
 );
 
 const platforms = [
