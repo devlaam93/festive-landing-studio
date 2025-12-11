@@ -46,17 +46,19 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
 
   return (
     <div className="flex gap-3 md:gap-6 justify-center">
-      {timeUnits.map((unit, index) => (
+      {timeUnits.map((unit) => (
         <div key={unit.label} className="flex flex-col items-center">
           <div className="relative">
-            <div className="glass-strong w-16 h-16 md:w-24 md:h-24 rounded-xl flex items-center justify-center border border-primary/30 animate-glow-pulse">
-              <span className="text-2xl md:text-4xl font-display font-bold text-gradient-primary">
+            <div className="glass-strong w-16 h-16 md:w-24 md:h-24 rounded-xl flex items-center justify-center border border-christmas-gold/40 animate-glow-pulse">
+              <span className="text-2xl md:text-4xl font-display font-bold text-christmas-gold">
                 {String(unit.value).padStart(2, '0')}
               </span>
             </div>
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-neon-cyan to-neon-magenta rounded-xl opacity-20 blur-sm -z-10" />
+            {/* Decorative ornament effect */}
+            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-christmas-red" />
+            <div className="absolute -inset-0.5 bg-gradient-to-br from-christmas-red/20 to-christmas-green/20 rounded-xl -z-10 blur-sm" />
           </div>
-          <span className="text-xs md:text-sm text-muted-foreground mt-2 font-medium uppercase tracking-wider">
+          <span className="text-xs md:text-sm text-muted-foreground mt-3 font-medium uppercase tracking-wider">
             {unit.label}
           </span>
         </div>

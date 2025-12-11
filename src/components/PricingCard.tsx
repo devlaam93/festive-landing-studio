@@ -1,4 +1,4 @@
-import { Check, Flame, Crown, Zap } from 'lucide-react';
+import { Check, Gift, Crown, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface PricingCardProps {
@@ -33,10 +33,10 @@ const PricingCard = ({
       {/* Popular Badge */}
       {popular && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
-          <div className="bg-gradient-accent px-4 py-1 rounded-full flex items-center gap-2 animate-pulse-glow">
-            <Flame className="w-4 h-4 text-background" />
-            <span className="text-xs font-display font-bold text-background uppercase tracking-wider">
-              Most Popular
+          <div className="bg-gradient-christmas px-4 py-1 rounded-full flex items-center gap-2 shadow-lg">
+            <Gift className="w-4 h-4 text-foreground" />
+            <span className="text-xs font-display font-bold text-foreground uppercase tracking-wider">
+              Best Value
             </span>
           </div>
         </div>
@@ -46,8 +46,8 @@ const PricingCard = ({
       <div 
         className={`absolute -inset-1 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg ${
           premium 
-            ? 'bg-gradient-to-r from-neon-orange to-neon-gold' 
-            : 'bg-gradient-to-r from-neon-cyan to-neon-magenta'
+            ? 'bg-gradient-to-r from-christmas-gold to-christmas-gold-light' 
+            : 'bg-gradient-to-r from-christmas-red to-christmas-green'
         }`} 
       />
 
@@ -55,23 +55,26 @@ const PricingCard = ({
       <div 
         className={`relative glass-strong rounded-2xl p-6 md:p-8 border transition-all duration-300 ${
           popular 
-            ? 'border-accent/50' 
+            ? 'border-christmas-gold/50' 
             : premium 
-              ? 'border-neon-orange/30 hover:border-neon-orange/60' 
-              : 'border-primary/30 hover:border-primary/60'
+              ? 'border-christmas-gold/30 hover:border-christmas-gold/60' 
+              : 'border-christmas-red/30 hover:border-christmas-red/60'
         }`}
       >
+        {/* Decorative corner ornaments */}
+        <div className="absolute top-3 right-3 text-lg animate-twinkle">✨</div>
+        
         {/* Header */}
         <div className="text-center mb-6">
           <div className="flex items-center justify-center gap-2 mb-2">
             {premium ? (
-              <Crown className="w-5 h-5 text-neon-orange" />
+              <Crown className="w-5 h-5 text-christmas-gold" />
             ) : (
-              <Zap className="w-5 h-5 text-primary" />
+              <Zap className="w-5 h-5 text-christmas-red" />
             )}
             <h3 className="font-display text-lg font-bold text-foreground">{title}</h3>
           </div>
-          <p className={`text-sm font-medium ${premium ? 'text-neon-orange' : 'text-primary'}`}>
+          <p className={`text-sm font-medium ${premium ? 'text-christmas-gold' : 'text-christmas-red'}`}>
             {serverType}
           </p>
         </div>
@@ -80,14 +83,14 @@ const PricingCard = ({
         <div className="text-center mb-6">
           <div className="flex items-baseline justify-center gap-1">
             <span className={`text-5xl md:text-6xl font-display font-black ${
-              premium ? 'text-gradient-accent' : 'text-gradient-primary'
+              premium ? 'text-gradient-gold' : 'text-christmas-red'
             }`}>
               ${price}
             </span>
           </div>
           <p className="text-sm text-muted-foreground mt-2">
             <span className="line-through">${originalPrice}</span>
-            <span className={`ml-2 font-semibold ${premium ? 'text-neon-orange' : 'text-primary'}`}>
+            <span className={`ml-2 font-semibold ${premium ? 'text-christmas-gold' : 'text-christmas-green'}`}>
               {discount}
             </span>
           </p>
@@ -98,7 +101,7 @@ const PricingCard = ({
           {features.slice(0, 8).map((feature, index) => (
             <li key={index} className="flex items-start gap-3">
               <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                premium ? 'text-neon-orange' : 'text-primary'
+                premium ? 'text-christmas-gold' : 'text-christmas-green'
               }`} />
               <span className="text-sm text-muted-foreground">{feature}</span>
             </li>
@@ -112,13 +115,13 @@ const PricingCard = ({
             size="xl" 
             className="w-full"
           >
-            Order Now
+            🎁 Order Now
           </Button>
         </a>
 
         {/* Trust Badge */}
         <p className="text-xs text-muted-foreground text-center mt-4 flex items-center justify-center gap-2">
-          <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+          <svg className="w-4 h-4 text-christmas-green" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
           </svg>
           7-Day Money Back Guarantee

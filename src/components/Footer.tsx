@@ -4,20 +4,23 @@ import { Button } from '@/components/ui/button';
 const Footer = () => {
   return (
     <footer id="contact" className="py-16 border-t border-border/50 relative">
+      {/* Decorative top border */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-christmas-red via-christmas-gold to-christmas-green" />
+      
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <span className="font-display font-black text-background text-lg">M</span>
+              <div className="w-10 h-10 rounded-lg bg-gradient-christmas flex items-center justify-center">
+                <span className="font-display font-black text-foreground text-lg">M</span>
               </div>
-              <span className="font-display font-bold text-xl text-gradient-primary">
+              <span className="font-display font-bold text-xl text-christmas-gold">
                 MODEIPTV
               </span>
             </div>
             <p className="text-sm text-muted-foreground mb-4">
-              Premium IPTV service in Canada with 15,000+ channels, 4K streaming, 
+              🎄 Premium IPTV service in Canada with 15,000+ channels, 4K streaming, 
               and unmatched reliability.
             </p>
             <div className="flex gap-3">
@@ -41,7 +44,7 @@ const Footer = () => {
                 <li key={link}>
                   <a 
                     href={`#${link.toLowerCase()}`}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors"
                   >
                     {link}
                   </a>
@@ -55,22 +58,22 @@ const Footer = () => {
             <h4 className="font-display font-bold text-foreground mb-4">Support</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
                   Installation Guide
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
                   Troubleshooting
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
                   Device Compatibility
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
                   Terms of Service
                 </a>
               </li>
@@ -82,23 +85,23 @@ const Footer = () => {
             <h4 className="font-display font-bold text-foreground mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                <MessageCircle className="w-4 h-4 text-primary" />
+                <MessageCircle className="w-4 h-4 text-christmas-gold" />
                 <a 
                   href="https://api.whatsapp.com/send/?phone=15594826660"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-christmas-gold transition-colors"
                 >
                   WhatsApp: +1 559 482 6660
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Mail className="w-4 h-4 text-primary" />
+                <Mail className="w-4 h-4 text-christmas-gold" />
                 <span>support@modeiptv.ca</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                <MapPin className="w-4 h-4 text-primary" />
-                <span>Canada</span>
+                <MapPin className="w-4 h-4 text-christmas-gold" />
+                <span>Canada 🇨🇦</span>
               </li>
             </ul>
           </div>
@@ -107,13 +110,13 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} MODEIPTV. All rights reserved.
+            © {new Date().getFullYear()} MODEIPTV. All rights reserved. 🎄 Happy Holidays!
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
               Terms of Service
             </a>
           </div>

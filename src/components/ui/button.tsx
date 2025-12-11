@@ -5,19 +5,20 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 font-display tracking-wider uppercase",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 font-display tracking-wider",
   {
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)]",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border-2 border-primary bg-transparent text-primary hover:bg-primary/10 hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)]",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        outline: "border-2 border-christmas-gold bg-transparent text-christmas-gold hover:bg-christmas-gold/10 hover:shadow-[0_0_30px_hsl(var(--christmas-gold)/0.3)]",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:shadow-[0_0_20px_hsl(var(--secondary)/0.4)]",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-to-r from-neon-cyan to-neon-magenta text-background font-bold hover:shadow-[0_0_40px_hsl(var(--neon-cyan)/0.5),0_0_60px_hsl(var(--neon-magenta)/0.3)] hover:scale-105 transition-all duration-300",
-        accent: "bg-gradient-to-r from-neon-orange to-neon-gold text-background font-bold hover:shadow-[0_0_40px_hsl(var(--neon-orange)/0.5)] hover:scale-105 transition-all duration-300",
-        glass: "glass border border-primary/30 text-foreground hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)]",
+        hero: "bg-gradient-to-r from-christmas-red to-christmas-red-dark text-foreground font-bold hover:shadow-[0_0_40px_hsl(var(--christmas-red)/0.6)] hover:scale-105 transition-all duration-300",
+        accent: "bg-gradient-to-r from-christmas-gold to-christmas-gold-light text-background font-bold hover:shadow-[0_0_40px_hsl(var(--christmas-gold)/0.5)] hover:scale-105 transition-all duration-300",
+        festive: "bg-gradient-to-r from-christmas-green to-christmas-green-light text-foreground font-bold hover:shadow-[0_0_40px_hsl(var(--christmas-green)/0.5)] hover:scale-105 transition-all duration-300",
+        glass: "glass border border-christmas-gold/30 text-foreground hover:border-christmas-gold hover:shadow-[0_0_20px_hsl(var(--christmas-gold)/0.3)]",
       },
       size: {
         default: "h-10 px-4 py-2",

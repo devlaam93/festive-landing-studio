@@ -4,10 +4,12 @@ import PricingSection from '@/components/PricingSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
+import Snowfall from '@/components/Snowfall';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <Snowfall />
       <Header />
       <main>
         <HeroSection />
