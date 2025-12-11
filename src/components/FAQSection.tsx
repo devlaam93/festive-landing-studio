@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import ScrollReveal from './ScrollReveal';
 
 const FAQSection = () => {
   const faqs = [
@@ -43,32 +44,40 @@ const FAQSection = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-black mb-6">
-            Frequently Asked <span className="text-christmas-green">Questions</span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            🎅 Got questions? We've got answers. If you can't find what you're looking for, 
-            reach out to our 24/7 support team.
-          </p>
-        </div>
+        <ScrollReveal animation="fade-up" duration={700}>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-display font-black mb-6">
+              Frequently Asked <span className="text-christmas-green">Questions</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              🎅 Got questions? We've got answers. If you can't find what you're looking for, 
+              reach out to our 24/7 support team.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* FAQ Accordion */}
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem 
+              <ScrollReveal 
                 key={index} 
-                value={`item-${index}`}
-                className="glass border border-border/50 rounded-xl px-6 data-[state=open]:border-christmas-gold/50 transition-colors"
+                animation="fade-up" 
+                delay={index * 100}
+                duration={500}
               >
-                <AccordionTrigger className="text-left font-display font-semibold hover:text-christmas-gold transition-colors py-5">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-5">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
+                <AccordionItem 
+                  value={`item-${index}`}
+                  className="glass border border-border/50 rounded-xl px-6 data-[state=open]:border-christmas-gold/50 transition-colors"
+                >
+                  <AccordionTrigger className="text-left font-display font-semibold hover:text-christmas-gold transition-colors py-5">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </ScrollReveal>
             ))}
           </Accordion>
         </div>

@@ -9,6 +9,7 @@ import {
   Smartphone
 } from 'lucide-react';
 import FeatureCard from './FeatureCard';
+import ScrollReveal from './ScrollReveal';
 
 const FeaturesSection = () => {
   const features = [
@@ -62,20 +63,29 @@ const FeaturesSection = () => {
       
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-black mb-6">
-            Why Choose <span className="text-christmas-gold">MODEIPTV?</span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            🎅 We're the top IPTV provider in Canada, offering reliable streaming with high-quality video 
-            that brings your favorite entertainment to life.
-          </p>
-        </div>
+        <ScrollReveal animation="fade-up" duration={700}>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-display font-black mb-6">
+              Why Choose <span className="text-christmas-gold">MODEIPTV?</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              🎅 We're the top IPTV provider in Canada, offering reliable streaming with high-quality video 
+              that brings your favorite entertainment to life.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <FeatureCard key={index} {...feature} />
+            <ScrollReveal 
+              key={index} 
+              animation={index % 2 === 0 ? 'fade-up' : 'fade-up'}
+              delay={index * 75}
+              duration={500}
+            >
+              <FeatureCard {...feature} />
+            </ScrollReveal>
           ))}
         </div>
       </div>

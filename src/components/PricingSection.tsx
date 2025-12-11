@@ -1,4 +1,5 @@
 import PricingCard from './PricingCard';
+import ScrollReveal from './ScrollReveal';
 
 const PricingSection = () => {
   const standardFeatures = [
@@ -84,33 +85,44 @@ const PricingSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black mb-6">
-            Unwrap Your <span className="text-christmas-red">Perfect Plan</span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            🎄 12-month and 24-month IPTV subscriptions in Canada, all including 4K streaming, 
-            catch-up TV, VOD, and a wide selection of live channels.
-          </p>
-        </div>
+        <ScrollReveal animation="fade-up" duration={700}>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black mb-6">
+              Unwrap Your <span className="text-christmas-red">Perfect Plan</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              🎄 12-month and 24-month IPTV subscriptions in Canada, all including 4K streaming, 
+              catch-up TV, VOD, and a wide selection of live channels.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Pricing Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-6">
           {pricingPlans.map((plan, index) => (
-            <PricingCard key={index} {...plan} />
+            <ScrollReveal 
+              key={index} 
+              animation="fade-up" 
+              delay={index * 100}
+              duration={600}
+            >
+              <PricingCard {...plan} />
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Trust Badges */}
-        <div className="mt-16 text-center">
-          <p className="text-sm text-muted-foreground mb-4">🔒 Secure & Encrypted Payments</p>
-          <div className="flex items-center justify-center gap-6 opacity-60">
-            <div className="w-12 h-8 bg-muted rounded flex items-center justify-center text-xs font-bold">VISA</div>
-            <div className="w-12 h-8 bg-muted rounded flex items-center justify-center text-xs font-bold">MC</div>
-            <div className="w-12 h-8 bg-muted rounded flex items-center justify-center text-xs font-bold">AMEX</div>
-            <div className="w-12 h-8 bg-muted rounded flex items-center justify-center text-xs font-bold">SSL</div>
+        <ScrollReveal animation="fade-up" delay={400} duration={600}>
+          <div className="mt-16 text-center">
+            <p className="text-sm text-muted-foreground mb-4">🔒 Secure & Encrypted Payments</p>
+            <div className="flex items-center justify-center gap-6 opacity-60">
+              <div className="w-12 h-8 bg-muted rounded flex items-center justify-center text-xs font-bold">VISA</div>
+              <div className="w-12 h-8 bg-muted rounded flex items-center justify-center text-xs font-bold">MC</div>
+              <div className="w-12 h-8 bg-muted rounded flex items-center justify-center text-xs font-bold">AMEX</div>
+              <div className="w-12 h-8 bg-muted rounded flex items-center justify-center text-xs font-bold">SSL</div>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
