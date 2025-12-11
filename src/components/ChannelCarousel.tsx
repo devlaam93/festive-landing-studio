@@ -84,7 +84,7 @@ const ChannelCarousel = () => {
                 <img 
                   src={platform.logo} 
                   alt={platform.name}
-                  className="h-8 w-auto max-w-28 object-contain group-hover:scale-110 transition-transform"
+                  className="h-8 w-auto max-w-28 object-contain group-hover:scale-110 transition-transform brightness-0 invert"
                 />
               </div>
             ))}
