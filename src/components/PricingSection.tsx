@@ -75,9 +75,38 @@ const PricingSection = () => {
         {/* Pricing Table */}
         <ScrollReveal animation="fade-up" delay={200} duration={700}>
           <div className="max-w-5xl mx-auto">
-            {/* Plan Headers */}
-            <div className="grid grid-cols-3 gap-4 mb-2">
-              <div className="hidden md:block" />
+        {/* Plan Headers - Mobile */}
+            <div className="grid grid-cols-2 gap-2 mb-2 md:hidden">
+              {plans.map((plan) => (
+                <div 
+                  key={plan.type}
+                  className={`relative text-center p-3 rounded-t-xl border-t border-x ${
+                    plan.popular 
+                      ? 'bg-christmas-gold/10 border-christmas-gold/50' 
+                      : 'bg-muted/30 border-border/50'
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-2 left-1/2 -translate-x-1/2">
+                      <span className="bg-gradient-christmas px-2 py-0.5 rounded-full text-[10px] font-bold text-foreground whitespace-nowrap">
+                        POPULAR
+                      </span>
+                    </div>
+                  )}
+                  <plan.icon className={`w-5 h-5 mx-auto mb-1 ${
+                    plan.type === 'premium' ? 'text-christmas-gold' : 'text-christmas-red'
+                  }`} />
+                  <h3 className="font-display font-bold text-sm">{plan.title}</h3>
+                  <p className={`text-[10px] ${
+                    plan.type === 'premium' ? 'text-christmas-gold' : 'text-christmas-red'
+                  }`}>{plan.subtitle}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Plan Headers - Desktop */}
+            <div className="hidden md:grid grid-cols-3 gap-4 mb-2">
+              <div />
               {plans.map((plan) => (
                 <div 
                   key={plan.type}
@@ -105,22 +134,57 @@ const PricingSection = () => {
               ))}
             </div>
 
-            {/* Features Comparison Table */}
-            <div className="glass-strong rounded-2xl border border-border/50 overflow-hidden">
+            {/* Features Comparison Table - Mobile */}
+            <div className="glass-strong rounded-xl border border-border/50 overflow-hidden md:hidden">
               {features.map((feature, index) => (
                 <div 
                   key={index}
-                  className={`grid grid-cols-3 gap-4 px-4 md:px-6 py-4 ${
+                  className={`grid grid-cols-3 gap-1 px-2 py-2.5 ${
                     index % 2 === 0 ? 'bg-muted/10' : ''
                   } ${index !== features.length - 1 ? 'border-b border-border/30' : ''}`}
                 >
-                  {/* Feature Name */}
-                  <div className="flex items-center gap-3">
-                    {feature.icon && <feature.icon className="w-4 h-4 text-muted-foreground hidden md:block" />}
-                    <span className="text-sm md:text-base font-medium">{feature.name}</span>
+                  <div className="flex items-center">
+                    <span className="text-[11px] font-medium leading-tight">{feature.name}</span>
                   </div>
-                  
-                  {/* Standard Value */}
+                  <div className="flex items-center justify-center">
+                    {typeof feature.standard === 'boolean' ? (
+                      feature.standard ? (
+                        <Check className="w-4 h-4 text-christmas-green" />
+                      ) : (
+                        <X className="w-4 h-4 text-muted-foreground/50" />
+                      )
+                    ) : (
+                      <span className="text-[10px] font-semibold text-christmas-red text-center">{feature.standard}</span>
+                    )}
+                  </div>
+                  <div className="flex items-center justify-center">
+                    {typeof feature.premium === 'boolean' ? (
+                      feature.premium ? (
+                        <Check className="w-4 h-4 text-christmas-gold" />
+                      ) : (
+                        <X className="w-4 h-4 text-muted-foreground/50" />
+                      )
+                    ) : (
+                      <span className="text-[10px] font-semibold text-christmas-gold text-center">{feature.premium}</span>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Features Comparison Table - Desktop */}
+            <div className="hidden md:block glass-strong rounded-2xl border border-border/50 overflow-hidden">
+              {features.map((feature, index) => (
+                <div 
+                  key={index}
+                  className={`grid grid-cols-3 gap-4 px-6 py-4 ${
+                    index % 2 === 0 ? 'bg-muted/10' : ''
+                  } ${index !== features.length - 1 ? 'border-b border-border/30' : ''}`}
+                >
+                  <div className="flex items-center gap-3">
+                    {feature.icon && <feature.icon className="w-4 h-4 text-muted-foreground" />}
+                    <span className="text-base font-medium">{feature.name}</span>
+                  </div>
                   <div className="flex items-center justify-center">
                     {typeof feature.standard === 'boolean' ? (
                       feature.standard ? (
@@ -132,8 +196,6 @@ const PricingSection = () => {
                       <span className="text-sm font-semibold text-christmas-red">{feature.standard}</span>
                     )}
                   </div>
-                  
-                  {/* Premium Value */}
                   <div className="flex items-center justify-center">
                     {typeof feature.premium === 'boolean' ? (
                       feature.premium ? (
