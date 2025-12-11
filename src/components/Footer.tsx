@@ -1,5 +1,6 @@
 import { MessageCircle, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logo from '@/assets/modeiptv-logo.svg';
 
 const Footer = () => {
   return (
@@ -11,13 +12,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-christmas flex items-center justify-center">
-                <span className="font-display font-black text-foreground text-lg">M</span>
-              </div>
-              <span className="font-display font-bold text-xl text-christmas-gold">
-                MODEIPTV
-              </span>
+            <div className="mb-4">
+              <img 
+                src={logo} 
+                alt="MODEIPTV Logo" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-sm text-muted-foreground mb-4">
               🎄 Premium IPTV service in Canada with 15,000+ channels, 4K streaming, 
