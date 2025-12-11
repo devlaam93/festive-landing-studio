@@ -1,0 +1,126 @@
+import { MessageCircle, Mail, MapPin } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+const Footer = () => {
+  return (
+    <footer id="contact" className="py-16 border-t border-border/50 relative">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          {/* Brand */}
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
+                <span className="font-display font-black text-background text-lg">M</span>
+              </div>
+              <span className="font-display font-bold text-xl text-gradient-primary">
+                MODEIPTV
+              </span>
+            </div>
+            <p className="text-sm text-muted-foreground mb-4">
+              Premium IPTV service in Canada with 15,000+ channels, 4K streaming, 
+              and unmatched reliability.
+            </p>
+            <div className="flex gap-3">
+              <a 
+                href="https://api.whatsapp.com/send/?phone=15594826660"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="glass" size="icon">
+                  <MessageCircle className="w-5 h-5" />
+                </Button>
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-display font-bold text-foreground mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              {['Home', 'Pricing', 'Features', 'FAQ', 'Contact'].map((link) => (
+                <li key={link}>
+                  <a 
+                    href={`#${link.toLowerCase()}`}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h4 className="font-display font-bold text-foreground mb-4">Support</h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Installation Guide
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Troubleshooting
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Device Compatibility
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Terms of Service
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-display font-bold text-foreground mb-4">Contact Us</h4>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3 text-sm text-muted-foreground">
+                <MessageCircle className="w-4 h-4 text-primary" />
+                <a 
+                  href="https://api.whatsapp.com/send/?phone=15594826660"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  WhatsApp: +1 559 482 6660
+                </a>
+              </li>
+              <li className="flex items-center gap-3 text-sm text-muted-foreground">
+                <Mail className="w-4 h-4 text-primary" />
+                <span>support@modeiptv.ca</span>
+              </li>
+              <li className="flex items-center gap-3 text-sm text-muted-foreground">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span>Canada</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} MODEIPTV. All rights reserved.
+          </p>
+          <div className="flex items-center gap-6">
+            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              Terms of Service
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
