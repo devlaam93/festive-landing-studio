@@ -137,12 +137,12 @@ const ChannelCarousel = () => {
             {duplicatedPlatforms.map((platform, index) => (
               <div
                 key={`platform-${index}`}
-                className="flex-shrink-0 w-40 h-20 rounded-xl glass border border-border/50 flex items-center justify-center hover:border-christmas-gold/50 transition-all duration-300 hover:scale-105 group"
+                className="flex-shrink-0 w-28 h-14 rounded-lg glass border border-border/50 flex items-center justify-center hover:border-christmas-gold/50 transition-all duration-300 hover:scale-105 group"
               >
                 <img 
                   src={platform.logo} 
                   alt={platform.name}
-                  className="h-8 w-auto max-w-28 object-contain group-hover:scale-110 transition-transform brightness-0 invert"
+                  className="h-5 w-auto max-w-20 object-contain group-hover:scale-110 transition-transform brightness-0 invert"
                 />
               </div>
             ))}
