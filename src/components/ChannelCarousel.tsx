@@ -33,14 +33,62 @@ const platforms = [
 ];
 
 const channels = [
-  { name: 'Sports', image: sportsImg, count: '500+' },
-  { name: 'Movies', image: moviesImg, count: '60K+' },
-  { name: 'News', image: newsImg, count: '200+' },
-  { name: 'Kids', image: kidsImg, count: '300+' },
-  { name: 'Documentary', image: documentaryImg, count: '400+' },
-  { name: 'Music', image: musicImg, count: '150+' },
-  { name: 'Comedy', image: comedyImg, count: '250+' },
-  { name: 'Drama', image: dramaImg, count: '1000+' },
+  { 
+    name: 'Sports', 
+    image: sportsImg, 
+    count: '500+',
+    description: 'Live games, highlights & analysis',
+    features: ['NFL', 'NBA', 'UEFA', 'PPV Events']
+  },
+  { 
+    name: 'Movies', 
+    image: moviesImg, 
+    count: '60K+',
+    description: 'Latest blockbusters & classics',
+    features: ['4K HDR', 'New Releases', 'Oscar Winners']
+  },
+  { 
+    name: 'News', 
+    image: newsImg, 
+    count: '200+',
+    description: '24/7 global news coverage',
+    features: ['CNN', 'BBC', 'Sky News', 'Local']
+  },
+  { 
+    name: 'Kids', 
+    image: kidsImg, 
+    count: '300+',
+    description: 'Safe content for all ages',
+    features: ['Disney', 'Cartoon Network', 'Nick']
+  },
+  { 
+    name: 'Documentary', 
+    image: documentaryImg, 
+    count: '400+',
+    description: 'Explore our world & beyond',
+    features: ['Nature', 'History', 'Science', 'Crime']
+  },
+  { 
+    name: 'Music', 
+    image: musicImg, 
+    count: '150+',
+    description: 'Concerts, videos & radio',
+    features: ['MTV', 'VH1', 'Live Concerts']
+  },
+  { 
+    name: 'Comedy', 
+    image: comedyImg, 
+    count: '250+',
+    description: 'Stand-up & comedy specials',
+    features: ['Stand-up', 'Sitcoms', 'Roasts']
+  },
+  { 
+    name: 'Drama', 
+    image: dramaImg, 
+    count: '1000+',
+    description: 'Award-winning series & shows',
+    features: ['Premium Series', 'Telenovelas', 'K-Drama']
+  },
 ];
 
 const ChannelCarousel = () => {
@@ -107,25 +155,61 @@ const ChannelCarousel = () => {
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
           
           <div 
-            className="flex gap-6 py-4"
+            className="flex gap-5 py-4"
             style={{ 
-              transform: `translateX(-${(channels.length * 200) - (offset % (channels.length * 200))}px)`,
+              transform: `translateX(-${(channels.length * 280) - (offset % (channels.length * 280))}px)`,
             }}
           >
             {duplicatedChannels.map((channel, index) => (
               <div
                 key={`channel-${index}`}
-                className="flex-shrink-0 w-48 h-32 rounded-xl glass border border-border/50 flex flex-col items-center justify-center hover:border-christmas-red/50 transition-all duration-300 hover:scale-105 group overflow-hidden relative"
+                className="flex-shrink-0 w-64 h-44 rounded-2xl overflow-hidden relative group cursor-pointer"
               >
+                {/* Background Image */}
                 <img 
                   src={channel.image} 
                   alt={channel.name}
-                  className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="relative z-10 text-center">
-                  <span className="font-display font-bold text-base text-foreground drop-shadow-lg">{channel.name}</span>
-                  <span className="block text-xs text-christmas-gold font-semibold drop-shadow-md">{channel.count} channels</span>
+                
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+                
+                {/* Shine Effect on Hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-tr from-transparent via-white/10 to-transparent" />
+                
+                {/* Content */}
+                <div className="absolute inset-0 p-4 flex flex-col justify-end">
+                  {/* Category Badge */}
+                  <div className="absolute top-3 right-3">
+                    <span className="px-2 py-1 rounded-full text-[10px] font-bold bg-christmas-red/90 text-white backdrop-blur-sm">
+                      {channel.count} Channels
+                    </span>
+                  </div>
+                  
+                  {/* Title & Description */}
+                  <h3 className="font-display font-black text-xl text-white mb-1 drop-shadow-lg">
+                    {channel.name}
+                  </h3>
+                  <p className="text-white/80 text-xs mb-2 line-clamp-1">
+                    {channel.description}
+                  </p>
+                  
+                  {/* Features Tags */}
+                  <div className="flex flex-wrap gap-1">
+                    {channel.features.slice(0, 3).map((feature, i) => (
+                      <span 
+                        key={i}
+                        className="px-2 py-0.5 rounded-md text-[9px] font-medium bg-white/20 text-white/90 backdrop-blur-sm border border-white/10"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+                
+                {/* Border Glow Effect */}
+                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-christmas-gold/50 transition-colors duration-300" />
               </div>
             ))}
           </div>
