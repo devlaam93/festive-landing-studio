@@ -290,7 +290,7 @@ const PricingSection = () => {
             <img 
               src={paymentBadges} 
               alt="Secure payment methods - Visa, Mastercard, American Express, Discover, PayPal, Apple Pay, Google Pay, iDEAL, Klarna, Bancontact"
-              className="max-w-full md:max-w-2xl mx-auto h-auto"
+              className="max-w-xs md:max-w-md mx-auto h-auto"
             />
           </div>
         </ScrollReveal>
