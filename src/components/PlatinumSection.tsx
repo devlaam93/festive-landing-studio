@@ -1,45 +1,25 @@
 import { Check, Crown, Zap, Shield, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ScrollReveal from './ScrollReveal';
-
 const PlatinumSection = () => {
-  const plans = [
-    {
-      duration: '6',
-      unit: 'Months',
-      price: '69.99',
-      originalPrice: '139.99',
-      perMonth: '11.67',
-      link: 'https://order.modeiptv.ca/step/checkout-6-months-platinum/',
-    },
-    {
-      duration: '12',
-      unit: 'Months',
-      price: '89.99',
-      originalPrice: '199.99',
-      perMonth: '7.50',
-      popular: true,
-      link: 'https://order.modeiptv.ca/step/checkout-12-months-platinum/',
-    },
-  ];
-
-  const allFeatures = [
-    '🇨🇦 & 🇺🇸 Exclusive Content',
-    '+35,000 Live Channels',
-    '+130K Movies & Series',
-    '8K/4K/UHD/FHD Quality',
-    'Netflix, Prime, Disney+',
-    'All Sports Channels',
-    'Free Hotiptv & Ibo Apps',
-    'Anti-Freeze™ 9.8 Tech',
-    'VPN Protection',
-    '24/7 Support',
-    'Instant Activation',
-    '7-Day Money Back',
-  ];
-
-  return (
-    <section id="platinum" className="py-16 md:py-24 relative">
+  const plans = [{
+    duration: '6',
+    unit: 'Months',
+    price: '69.99',
+    originalPrice: '139.99',
+    perMonth: '11.67',
+    link: 'https://order.modeiptv.ca/step/checkout-6-months-platinum/'
+  }, {
+    duration: '12',
+    unit: 'Months',
+    price: '89.99',
+    originalPrice: '199.99',
+    perMonth: '7.50',
+    popular: true,
+    link: 'https://order.modeiptv.ca/step/checkout-12-months-platinum/'
+  }];
+  const allFeatures = ['🇨🇦 & 🇺🇸 Exclusive Content', '+35,000 Live Channels', '+130K Movies & Series', '8K/4K/UHD/FHD Quality', 'Netflix, Prime, Disney+', 'All Sports Channels', 'Free Hotiptv & Ibo Apps', 'Anti-Freeze™ 9.8 Tech', 'VPN Protection', '24/7 Support', 'Instant Activation', '7-Day Money Back'];
+  return <section id="platinum" className="py-16 md:py-24 relative pt-[96px]">
       <div className="absolute inset-0 bg-gradient-to-b from-christmas-gold/5 via-transparent to-transparent" />
       
       <div className="container mx-auto px-4 relative z-10">
@@ -60,29 +40,13 @@ const PlatinumSection = () => {
         {/* Cards */}
         <ScrollReveal animation="fade-up" delay={150} duration={600}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
-            {plans.map((plan, index) => (
-              <div
-                key={index}
-                className={`relative rounded-2xl transition-transform duration-300 hover:-translate-y-1 ${
-                  plan.popular ? 'md:-mt-2 md:mb-2' : ''
-                }`}
-              >
+            {plans.map((plan, index) => <div key={index} className={`relative rounded-2xl transition-transform duration-300 hover:-translate-y-1 ${plan.popular ? 'md:-mt-2 md:mb-2' : ''}`}>
                 {/* Card */}
-                <div className={`h-full rounded-2xl overflow-hidden ${
-                  plan.popular
-                    ? 'bg-gradient-to-b from-christmas-gold/20 to-christmas-gold/5 border-2 border-christmas-gold shadow-lg shadow-christmas-gold/10'
-                    : 'bg-muted/20 border border-border/60'
-                }`}>
+                <div className={`h-full rounded-2xl overflow-hidden ${plan.popular ? 'bg-gradient-to-b from-christmas-gold/20 to-christmas-gold/5 border-2 border-christmas-gold shadow-lg shadow-christmas-gold/10' : 'bg-muted/20 border border-border/60'}`}>
                   
                   {/* Header Bar */}
-                  <div className={`py-3 px-4 text-center ${
-                    plan.popular 
-                      ? 'bg-gradient-christmas' 
-                      : 'bg-muted/50'
-                  }`}>
-                    <span className={`text-sm font-bold flex items-center justify-center gap-2 ${
-                      plan.popular ? 'text-foreground' : 'text-muted-foreground'
-                    }`}>
+                  <div className={`py-3 px-4 text-center ${plan.popular ? 'bg-gradient-christmas' : 'bg-muted/50'}`}>
+                    <span className={`text-sm font-bold flex items-center justify-center gap-2 ${plan.popular ? 'text-foreground' : 'text-muted-foreground'}`}>
                       {plan.popular && <Sparkles className="w-4 h-4" />}
                       {plan.popular ? 'BEST VALUE' : 'STARTER'}
                       {plan.popular && <Sparkles className="w-4 h-4" />}
@@ -94,9 +58,7 @@ const PlatinumSection = () => {
                     <div className="flex items-center justify-between mb-5 pb-5 border-b border-border/30">
                       <div>
                         <div className="flex items-baseline gap-1">
-                          <span className={`text-5xl font-display font-black ${
-                            plan.popular ? 'text-christmas-gold' : ''
-                          }`}>{plan.duration}</span>
+                          <span className={`text-5xl font-display font-black ${plan.popular ? 'text-christmas-gold' : ''}`}>{plan.duration}</span>
                           <span className="text-lg font-bold text-muted-foreground">{plan.unit}</span>
                         </div>
                         <p className="text-xs text-muted-foreground mt-1">Platinum Server</p>
@@ -110,14 +72,10 @@ const PlatinumSection = () => {
 
                     {/* Features - 2 columns */}
                     <div className="grid grid-cols-2 gap-x-3 gap-y-2 mb-5">
-                      {allFeatures.map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-1.5">
-                          <Check className={`w-3.5 h-3.5 flex-shrink-0 ${
-                            plan.popular ? 'text-christmas-gold' : 'text-christmas-green'
-                          }`} />
+                      {allFeatures.map((feature, idx) => <div key={idx} className="flex items-center gap-1.5">
+                          <Check className={`w-3.5 h-3.5 flex-shrink-0 ${plan.popular ? 'text-christmas-gold' : 'text-christmas-green'}`} />
                           <span className="text-xs text-muted-foreground truncate">{feature}</span>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
 
                     {/* Guarantee */}
@@ -128,19 +86,14 @@ const PlatinumSection = () => {
 
                     {/* CTA */}
                     <a href={plan.link} target="_blank" rel="noopener noreferrer">
-                      <Button
-                        variant={plan.popular ? 'accent' : 'hero'}
-                        size="lg"
-                        className="w-full font-bold"
-                      >
+                      <Button variant={plan.popular ? 'accent' : 'hero'} size="lg" className="w-full font-bold">
                         <Zap className="w-4 h-4 mr-2" />
                         Get Platinum
                       </Button>
                     </a>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </ScrollReveal>
 
@@ -164,8 +117,6 @@ const PlatinumSection = () => {
           </div>
         </ScrollReveal>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PlatinumSection;
