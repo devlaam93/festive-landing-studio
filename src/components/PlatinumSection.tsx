@@ -1,193 +1,164 @@
-import { Check, Star, Zap, Shield, Clock, Users, Sparkles } from 'lucide-react';
+import { Check, Crown, Zap, Shield, Flame, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ScrollReveal from './ScrollReveal';
 
 const PlatinumSection = () => {
   const features = [
-    { text: 'Just for 🇨🇦 & 🇺🇸 content', highlight: true },
-    { text: 'Hotiptv app for free' },
-    { text: 'Ibo player app for free' },
-    { text: 'Instant Activation!' },
-    { text: '+35,000 Channels', highlight: true },
-    { text: '+130K Movies and Series (VOD)', highlight: true },
-    { text: 'Netflix, Amazon Prime, Disney+ et Plus' },
-    { text: 'All sports channels are available' },
-    { text: 'Catch-up and EPG' },
-    { text: '8K, 4K, UHD, FHD, HD Channels' },
-    { text: 'Fast & Stable' },
-    { text: 'Always Uptime Server' },
-    { text: 'Anti-Freeze™ 9.8 Technology' },
-    { text: 'Privacy Protection and Integrated VPN' },
-    { text: '24/7 Live Chat Support' },
+    'Just for 🇨🇦 & 🇺🇸 content',
+    'Hotiptv & Ibo player apps free',
+    'Instant Activation',
+    '+35,000 Channels',
+    '+130K Movies & Series (VOD)',
+    'Netflix, Prime, Disney+',
+    'All Sports Channels',
+    'Catch-up & EPG',
+    '8K, 4K, UHD, FHD, HD',
+    'Anti-Freeze™ 9.8 Tech',
+    'VPN Protection',
+    '24/7 Support',
   ];
 
   const plans = [
     {
-      duration: '6 Months',
+      duration: '6',
+      label: 'Months',
       price: '69.99',
       originalPrice: '139.99',
       perMonth: '11.67',
-      discount: '50%',
+      savings: '70',
       link: 'https://order.modeiptv.ca/step/checkout-6-months-platinum/',
     },
     {
-      duration: '12 Months',
+      duration: '12',
+      label: 'Months',
       price: '89.99',
       originalPrice: '199.99',
       perMonth: '7.50',
-      discount: '55%',
+      savings: '110',
       popular: true,
       link: 'https://order.modeiptv.ca/step/checkout-12-months-platinum/',
     },
   ];
 
   return (
-    <section id="platinum" className="py-20 md:py-32 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-christmas-red/5 to-background" />
-      
-      {/* Decorative elements */}
-      <div className="absolute top-1/4 left-10 w-64 h-64 bg-christmas-gold/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-christmas-red/10 rounded-full blur-3xl" />
-      <div className="absolute top-10 right-20 text-4xl opacity-20 animate-float">👑</div>
-      <div className="absolute bottom-20 left-20 text-3xl opacity-20 animate-float" style={{ animationDelay: '-2s' }}>⭐</div>
+    <section id="platinum" className="py-20 md:py-32 relative overflow-hidden bg-gradient-to-b from-background via-muted/10 to-background">
+      {/* Animated Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-christmas-gold/20 rounded-full blur-[100px] animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-christmas-red/15 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }} />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
+        {/* Header */}
         <ScrollReveal animation="fade-up" duration={700}>
-          <div className="text-center max-w-4xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-christmas-gold/20 to-christmas-red/20 border border-christmas-gold/30 mb-6">
-              <Star className="w-4 h-4 text-christmas-gold fill-christmas-gold" />
-              <span className="text-sm font-semibold text-christmas-gold">Exclusive Platinum Offer</span>
-              <Star className="w-4 h-4 text-christmas-gold fill-christmas-gold" />
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-christmas-gold/20 via-christmas-gold/10 to-christmas-red/20 border border-christmas-gold/40 mb-8">
+              <Crown className="w-5 h-5 text-christmas-gold" />
+              <span className="text-base font-bold bg-gradient-to-r from-christmas-gold to-christmas-red bg-clip-text text-transparent">
+                PLATINUM EXCLUSIVE
+              </span>
+              <Crown className="w-5 h-5 text-christmas-gold" />
             </div>
             
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-black mb-4">
-              Modeiptv Platinum Account Only{' '}
-              <span className="text-christmas-gold">🇨🇦 & 🇺🇸</span> content
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black mb-6 leading-tight">
+              Premium <span className="bg-gradient-to-r from-christmas-gold via-christmas-red to-christmas-gold bg-clip-text text-transparent">🇨🇦 & 🇺🇸</span> Content
             </h2>
-            <p className="text-xl md:text-2xl text-christmas-red font-semibold mb-6">
-              Available only as part of our Holiday offer.
-            </p>
             
-            <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              This package offers <span className="text-foreground font-semibold">a large selection of premium 🇨🇦 Canadian and 🇺🇸 American channels</span>, with advanced features and ultra-high streaming quality.
-              It includes <span className="text-foreground font-semibold">4K and even 8K channels</span>, exclusive sports, movies, series, and a powerful VOD library, all optimized for fast, stable performance.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Exclusive North American channels with 4K/8K quality, sports, movies, and VOD library optimized for maximum performance.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Pricing Cards */}
+        {/* Cards Container */}
         <ScrollReveal animation="fade-up" delay={200} duration={700}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6 max-w-5xl mx-auto items-stretch">
             {plans.map((plan, index) => (
               <div
                 key={index}
-                className={`relative rounded-3xl overflow-hidden transition-all duration-500 hover:scale-[1.02] ${
-                  plan.popular
-                    ? 'ring-2 ring-christmas-gold shadow-2xl shadow-christmas-gold/20'
-                    : 'ring-1 ring-border/50 hover:ring-christmas-gold/50'
-                }`}
+                className={`flex-1 relative group ${plan.popular ? 'lg:-mt-4 lg:mb-4' : ''}`}
               >
-                {/* Popular Badge */}
+                {/* Glow Effect for Popular */}
                 {plan.popular && (
-                  <div className="absolute top-0 left-0 right-0 bg-gradient-christmas py-2 text-center">
-                    <span className="text-xs font-bold text-foreground flex items-center justify-center gap-2">
-                      <Sparkles className="w-3 h-3" />
-                      MOST POPULAR — BEST VALUE
-                      <Sparkles className="w-3 h-3" />
-                    </span>
-                  </div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-christmas-gold via-christmas-red to-christmas-gold rounded-3xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity" />
                 )}
-
-                {/* Card Content */}
-                <div className={`p-6 md:p-8 ${plan.popular ? 'pt-12 md:pt-14' : ''} bg-gradient-to-br ${
+                
+                <div className={`relative h-full rounded-2xl overflow-hidden transition-all duration-500 ${
                   plan.popular 
-                    ? 'from-christmas-gold/10 via-background to-christmas-red/5' 
-                    : 'from-muted/30 to-background'
+                    ? 'bg-gradient-to-br from-christmas-gold/15 via-background to-christmas-red/10 border-2 border-christmas-gold/50' 
+                    : 'bg-muted/20 border border-border/50 hover:border-christmas-gold/30'
                 }`}>
                   
-                  {/* Header */}
-                  <div className="text-center mb-6">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 ${
-                      plan.popular 
-                        ? 'bg-gradient-christmas shadow-lg shadow-christmas-gold/30' 
-                        : 'bg-muted/50 border border-border'
-                    }`}>
-                      <Star className={`w-8 h-8 ${plan.popular ? 'text-foreground fill-foreground' : 'text-christmas-gold'}`} />
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-display font-black text-foreground mb-1">
-                      {plan.duration}
-                    </h3>
-                    <p className="text-christmas-gold text-sm font-semibold">Platinum Performance Server</p>
-                  </div>
-
-                  {/* Price */}
-                  <div className="text-center mb-6 p-4 rounded-2xl bg-muted/30 border border-border/50">
-                    <div className="flex items-center justify-center gap-2 mb-1">
-                      <span className="text-lg text-muted-foreground line-through">${plan.originalPrice}</span>
-                      <span className="px-2 py-0.5 rounded-full bg-christmas-green/20 text-christmas-green text-xs font-bold">
-                        {plan.discount} OFF
+                  {/* Popular Ribbon */}
+                  {plan.popular && (
+                    <div className="absolute top-4 -right-8 rotate-45 bg-gradient-christmas px-10 py-1">
+                      <span className="text-[10px] font-bold text-foreground flex items-center gap-1">
+                        <Flame className="w-3 h-3" /> BEST DEAL
                       </span>
                     </div>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-5xl md:text-6xl font-display font-black text-foreground">${plan.price}</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground mt-2">
-                      Only <span className="text-christmas-gold font-bold">${plan.perMonth}/month</span>
-                    </p>
-                  </div>
+                  )}
 
-                  {/* Features */}
-                  <div className="space-y-2.5 mb-6">
-                    {features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <div className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${
-                          feature.highlight 
-                            ? 'bg-christmas-gold/20' 
-                            : 'bg-christmas-green/20'
+                  <div className="p-6 md:p-8">
+                    {/* Duration Badge */}
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="flex items-baseline gap-1">
+                        <span className={`text-6xl md:text-7xl font-display font-black ${
+                          plan.popular ? 'text-christmas-gold' : 'text-foreground'
                         }`}>
-                          <Check className={`w-3 h-3 ${
-                            feature.highlight ? 'text-christmas-gold' : 'text-christmas-green'
-                          }`} />
-                        </div>
-                        <span className={`text-sm ${
-                          feature.highlight 
-                            ? 'text-foreground font-medium' 
-                            : 'text-muted-foreground'
-                        }`}>{feature.text}</span>
+                          {plan.duration}
+                        </span>
+                        <span className="text-xl font-bold text-muted-foreground">{plan.label}</span>
                       </div>
-                    ))}
-                  </div>
+                      {plan.popular && (
+                        <div className="px-3 py-1 rounded-full bg-christmas-green/20 border border-christmas-green/30">
+                          <span className="text-xs font-bold text-christmas-green">SAVE ${plan.savings}</span>
+                        </div>
+                      )}
+                    </div>
 
-                  {/* Guarantee Badge */}
-                  <div className="flex items-center justify-center gap-2 mb-6 p-3 rounded-xl bg-christmas-red/10 border border-christmas-red/20">
-                    <Shield className="w-4 h-4 text-christmas-red" />
-                    <span className="text-sm font-semibold text-christmas-red">7 Days Money Back Guarantee</span>
-                  </div>
+                    {/* Price Block */}
+                    <div className="mb-6 pb-6 border-b border-border/30">
+                      <div className="flex items-end gap-3 mb-2">
+                        <span className="text-4xl md:text-5xl font-display font-black">${plan.price}</span>
+                        <span className="text-lg text-muted-foreground line-through mb-1">${plan.originalPrice}</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        Just <span className="text-christmas-gold font-bold">${plan.perMonth}</span> per month
+                      </p>
+                    </div>
 
-                  {/* CTA Button */}
-                  <a href={plan.link} target="_blank" rel="noopener noreferrer" className="block">
-                    <Button
-                      variant={plan.popular ? 'accent' : 'hero'}
-                      size="lg"
-                      className={`w-full group text-base font-bold py-6 ${
-                        plan.popular ? 'shadow-lg shadow-christmas-gold/30' : ''
-                      }`}
-                    >
-                      <Zap className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-                      Get Platinum Access Now
-                    </Button>
-                  </a>
+                    {/* Features Grid */}
+                    <div className="grid grid-cols-1 gap-2 mb-6">
+                      {features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center gap-2.5">
+                          <Check className={`w-4 h-4 flex-shrink-0 ${
+                            plan.popular ? 'text-christmas-gold' : 'text-christmas-green'
+                          }`} />
+                          <span className="text-sm text-muted-foreground">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
 
-                  {/* Trust indicators */}
-                  <div className="flex items-center justify-center gap-4 mt-4 text-xs text-muted-foreground">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" /> Instant Activation
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Users className="w-3 h-3" /> 50K+ Users
-                    </span>
+                    {/* Guarantee */}
+                    <div className="flex items-center gap-2 p-3 rounded-xl bg-muted/30 border border-border/30 mb-6">
+                      <Shield className="w-5 h-5 text-christmas-red" />
+                      <span className="text-sm font-medium">7-Day Money Back Guarantee</span>
+                    </div>
+
+                    {/* CTA */}
+                    <a href={plan.link} target="_blank" rel="noopener noreferrer" className="block">
+                      <Button
+                        variant={plan.popular ? 'accent' : 'hero'}
+                        size="lg"
+                        className={`w-full group font-bold py-6 ${
+                          plan.popular ? 'shadow-xl shadow-christmas-gold/20' : ''
+                        }`}
+                      >
+                        <Zap className="w-5 h-5 mr-2" />
+                        Get Platinum Now
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -195,17 +166,21 @@ const PlatinumSection = () => {
           </div>
         </ScrollReveal>
 
-        {/* Social Proof */}
+        {/* Bottom Trust Bar */}
         <ScrollReveal animation="fade-up" delay={400} duration={600}>
-          <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-1 mb-2">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 text-christmas-gold fill-christmas-gold" />
-              ))}
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-6 md:gap-10 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-christmas-green animate-pulse" />
+              <span>Instant Activation</span>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Trusted by <span className="text-foreground font-semibold">50,000+</span> customers across North America
-            </p>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-christmas-gold animate-pulse" />
+              <span>50K+ Active Users</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-christmas-red animate-pulse" />
+              <span>99.9% Uptime</span>
+            </div>
           </div>
         </ScrollReveal>
       </div>
