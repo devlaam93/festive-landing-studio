@@ -150,9 +150,9 @@ const PricingSection = () => {
             {/* Plan Headers - Desktop */}
             <div className="hidden md:grid grid-cols-3 gap-4 mb-2">
               <div />
-              {plans.map(plan => <div key={plan.type} className={`relative text-center p-6 rounded-t-2xl border-t border-x ${plan.popular ? 'bg-christmas-gold/10 border-christmas-gold/50' : 'bg-muted/30 border-border/50'}`}>
-                  {plan.popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="bg-gradient-christmas px-3 py-1 rounded-full text-xs font-bold text-foreground">
+              {plans.map(plan => <div key={plan.type} className={`relative text-center p-6 pt-10 rounded-t-2xl border-t border-x ${plan.popular ? 'bg-christmas-gold/10 border-christmas-gold/50' : 'bg-muted/30 border-border/50'}`}>
+                  {plan.popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                      <span className="bg-gradient-christmas px-4 py-1.5 rounded-full text-xs font-bold text-foreground whitespace-nowrap">
                         MOST POPULAR
                       </span>
                     </div>}
