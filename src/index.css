@@ -231,18 +231,24 @@
   }
 }
 
-/* Scrollbar Styling */
+/* Scrollbar Styling - Overlay */
+html {
+  scrollbar-gutter: stable;
+  overflow-y: overlay;
+}
+
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--background));
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted));
-  border-radius: 4px;
+  background: hsl(var(--muted) / 0.5);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
