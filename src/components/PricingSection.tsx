@@ -113,7 +113,7 @@ const PricingSection = () => {
       <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-christmas-red/5 rounded-full blur-3xl" />
       <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-christmas-gold/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4 relative z-10 pr-[15px] pb-0 pl-px">
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <ScrollReveal animation="fade-up" duration={700}>
           <div className="text-center max-w-3xl mx-auto mb-16">
