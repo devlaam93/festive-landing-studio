@@ -1,6 +1,7 @@
 import { Check, X, Crown, Zap, Shield, Tv, Film, Headphones } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ScrollReveal from './ScrollReveal';
+import paymentBadges from '@/assets/payment-badges.webp';
 
 const PricingSection = () => {
   const features = [
@@ -286,16 +287,11 @@ const PricingSection = () => {
         <ScrollReveal animation="fade-up" delay={400} duration={600}>
           <div className="mt-16 text-center">
             <p className="text-sm text-muted-foreground mb-4">🔒 Secure & Encrypted Payments</p>
-            <div className="flex items-center justify-center gap-4 flex-wrap">
-              {['VISA', 'MC', 'AMEX', 'PayPal', 'SSL'].map((badge) => (
-                <div 
-                  key={badge}
-                  className="px-4 py-2 bg-muted/50 rounded-lg border border-border/50 text-xs font-bold text-muted-foreground"
-                >
-                  {badge}
-                </div>
-              ))}
-            </div>
+            <img 
+              src={paymentBadges} 
+              alt="Secure payment methods - Visa, Mastercard, American Express, Discover, PayPal, Apple Pay, Google Pay, iDEAL, Klarna, Bancontact"
+              className="max-w-full md:max-w-2xl mx-auto h-auto"
+            />
           </div>
         </ScrollReveal>
       </div>
