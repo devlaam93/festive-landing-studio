@@ -78,6 +78,10 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   html, body {
     @apply bg-background text-foreground antialiased overflow-x-hidden;
     font-family: 'Inter', sans-serif;
