@@ -62,8 +62,8 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* CTA Button */}
-            <div className="hidden md:block">
+            {/* CTA Button - Desktop only */}
+            <div className="hidden lg:block">
               <a href="#pricing">
                 <Button variant="hero" size="lg">
                   🎄 Start Free Trial
@@ -71,13 +71,23 @@ const Header = () => {
               </a>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="lg:hidden p-2 text-foreground"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* Tablet & Mobile: CTA + Menu Button */}
+            <div className="flex items-center gap-3 lg:hidden">
+              {/* CTA Button - Tablet */}
+              <a href="#pricing" className="hidden sm:block">
+                <Button variant="hero" size="sm">
+                  🎄 Start Free Trial
+                </Button>
+              </a>
+              
+              {/* Mobile Menu Button */}
+              <button
+                className="p-2 text-foreground"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
 
