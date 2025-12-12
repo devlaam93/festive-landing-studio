@@ -1,10 +1,20 @@
 import { Menu, X, Gift } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/modeiptv-logo.svg';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { label: 'Home', href: '#' },
@@ -16,10 +26,10 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Promo Banner */}
-      <div className="bg-gradient-to-r from-christmas-red via-christmas-red-dark to-christmas-red py-2 px-4 text-center">
-        <p className="text-xs md:text-sm font-semibold text-foreground flex items-center justify-center gap-2">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'shadow-lg shadow-black/20' : ''}`}>
+      {/* Promo Banner - hides on scroll */}
+      <div className={`bg-gradient-to-r from-christmas-red via-christmas-red-dark to-christmas-red overflow-hidden transition-all duration-300 ${scrolled ? 'max-h-0 py-0' : 'max-h-20 py-2'}`}>
+        <p className="text-xs md:text-sm font-semibold text-foreground flex items-center justify-center gap-2 px-4">
           <Gift className="w-4 h-4" />
           CHRISTMAS SALE — 80% OFF + 1 Month FREE — Limited Time!
           <Gift className="w-4 h-4" />
@@ -27,7 +37,7 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <div className="glass-strong border-b border-border/50">
+      <div className={`border-b border-border/50 transition-all duration-300 ${scrolled ? 'glass-strong bg-background/95' : 'glass-strong'}`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
