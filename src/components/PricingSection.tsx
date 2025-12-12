@@ -76,28 +76,29 @@ const PricingSection = () => {
         <ScrollReveal animation="fade-up" delay={200} duration={700}>
           <div className="max-w-5xl mx-auto">
         {/* Plan Headers - Mobile */}
-            <div className="grid grid-cols-2 gap-2 mb-2 md:hidden">
+            <div className="grid grid-cols-[1fr_80px_80px] gap-1 mb-0 md:hidden">
+              <div />
               {plans.map((plan) => (
                 <div 
                   key={plan.type}
-                  className={`relative text-center p-3 rounded-t-xl border-t border-x ${
+                  className={`relative text-center py-3 px-2 rounded-t-xl border-t border-x ${
                     plan.popular 
                       ? 'bg-christmas-gold/10 border-christmas-gold/50' 
                       : 'bg-muted/30 border-border/50'
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-2 left-1/2 -translate-x-1/2">
-                      <span className="bg-gradient-christmas px-2 py-0.5 rounded-full text-[10px] font-bold text-foreground whitespace-nowrap">
-                        POPULAR
+                    <div className="absolute -top-2 left-1/2 -translate-x-1/2 z-10">
+                      <span className="bg-gradient-christmas px-2 py-0.5 rounded-full text-[9px] font-bold text-foreground whitespace-nowrap">
+                        MOST POPULAR
                       </span>
                     </div>
                   )}
                   <plan.icon className={`w-5 h-5 mx-auto mb-1 ${
                     plan.type === 'premium' ? 'text-christmas-gold' : 'text-christmas-red'
                   }`} />
-                  <h3 className="font-display font-bold text-sm">{plan.title}</h3>
-                  <p className={`text-[10px] ${
+                  <h3 className="font-display font-bold text-xs">{plan.title}</h3>
+                  <p className={`text-[9px] leading-tight ${
                     plan.type === 'premium' ? 'text-christmas-gold' : 'text-christmas-red'
                   }`}>{plan.subtitle}</p>
                 </div>
@@ -135,11 +136,11 @@ const PricingSection = () => {
             </div>
 
             {/* Features Comparison Table - Mobile */}
-            <div className="glass-strong rounded-xl border border-border/50 overflow-hidden md:hidden">
+            <div className="glass-strong rounded-b-xl rounded-t-none border border-t-0 border-border/50 overflow-hidden md:hidden">
               {features.map((feature, index) => (
                 <div 
                   key={index}
-                  className={`grid grid-cols-3 gap-1 px-2 py-2.5 ${
+                  className={`grid grid-cols-[1fr_80px_80px] gap-1 px-3 py-2.5 ${
                     index % 2 === 0 ? 'bg-muted/10' : ''
                   } ${index !== features.length - 1 ? 'border-b border-border/30' : ''}`}
                 >
