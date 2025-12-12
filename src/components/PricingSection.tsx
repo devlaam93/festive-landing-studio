@@ -58,7 +58,7 @@ const PricingSection = () => {
   }, {
     name: 'Money Back Guarantee',
     standard: '7 Days',
-    premium: '30 Days'
+    premium: '14 Days'
   }];
   const plans = [{
     type: 'standard',
