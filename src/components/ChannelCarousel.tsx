@@ -124,11 +124,11 @@ const ChannelCarousel = () => {
         </ScrollReveal>
 
         {/* Platforms Carousel - moves left */}
-        <div className="mb-8 relative">
+        <div className="mb-8 relative overflow-hidden">
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
           
-          <div className="flex gap-6 py-4" style={{
+          <div className="flex gap-6 py-4 ml-0" style={{
           transform: `translateX(-${offset % (platforms.length * 180)}px)`
         }}>
             {duplicatedPlatforms.map((platform, index) => <div key={`platform-${index}`} className="flex-shrink-0 w-28 h-14 rounded-lg glass border border-border/50 flex items-center justify-center hover:border-christmas-gold/50 transition-all duration-300 hover:scale-105 group">
@@ -138,11 +138,11 @@ const ChannelCarousel = () => {
         </div>
 
         {/* Channels Carousel - moves right */}
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
           
-          <div className="flex gap-5 py-4" style={{
+          <div className="flex gap-5 py-4 ml-0" style={{
           transform: `translateX(-${channels.length * 280 - offset % (channels.length * 280)}px)`
         }}>
             {duplicatedChannels.map((channel, index) => <div key={`channel-${index}`} className="flex-shrink-0 w-64 h-44 rounded-2xl overflow-hidden relative group cursor-pointer">
