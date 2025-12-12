@@ -32,9 +32,15 @@ const PlatinumSection = () => {
             <Crown className="w-5 h-5 text-christmas-gold" />
             <div className="h-px w-8 bg-gradient-to-l from-transparent to-christmas-gold" />
           </div>
-          <h2 className="text-center text-3xl md:text-4xl font-display font-black mb-10">
+          <h2 className="text-center text-3xl md:text-4xl font-display font-black mb-4">
             Canada & USA Only 🇨🇦 🇺🇸
           </h2>
+          <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-3 text-sm md:text-base">
+            <span className="text-christmas-gold font-semibold">Available only as part of our Black Friday offer.</span> This package offers a large selection of premium Canadian and American channels, with advanced features and ultra-high streaming quality.
+          </p>
+          <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-10 text-sm md:text-base">
+            Includes 4K and even 8K channels, exclusive sports, movies, series, and a powerful VOD library — all optimized for fast, stable performance. If you want more options, more quality, and more Platinum channels, this is the perfect choice.
+          </p>
         </ScrollReveal>
 
         {/* Cards */}
