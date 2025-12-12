@@ -1,36 +1,27 @@
-import { MessageCircle, Mail, MapPin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import ScrollReveal from './ScrollReveal';
-import logo from '@/assets/modeiptv-logo.svg';
+import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import ScrollReveal from "./ScrollReveal";
+import logo from "@/assets/modeiptv-logo.svg";
 
 const Footer = () => {
   return (
     <footer id="contact" className="py-16 border-t border-border/50 relative">
       {/* Decorative top border */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-christmas-red via-christmas-gold to-christmas-green" />
-      
+
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <ScrollReveal animation="fade-up" delay={0} duration={500}>
             <div>
               <div className="mb-4">
-                <img 
-                  src={logo} 
-                  alt="MODEIPTV Logo" 
-                  className="h-10 w-auto"
-                />
+                <img src={logo} alt="MODEIPTV Logo" className="h-10 w-auto" />
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                🎄 Premium IPTV service in Canada with 15,000+ channels, 4K streaming, 
-                and unmatched reliability.
+                🎄 Premium IPTV service in Canada with 15,000+ channels, 4K streaming, and unmatched reliability.
               </p>
               <div className="flex gap-3">
-                <a 
-                  href="https://api.whatsapp.com/send/?phone=15594826660"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://api.whatsapp.com/send/?phone=15594826660" target="_blank" rel="noopener noreferrer">
                   <Button variant="glass" size="icon">
                     <MessageCircle className="w-5 h-5" />
                   </Button>
@@ -44,9 +35,9 @@ const Footer = () => {
             <div>
               <h4 className="font-display font-bold text-foreground mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                {['Home', 'Pricing', 'Features', 'FAQ', 'Contact'].map((link) => (
+                {["Home", "Pricing", "Features", "FAQ", "Contact"].map((link) => (
                   <li key={link}>
-                    <a 
+                    <a
                       href={`#${link.toLowerCase()}`}
                       className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors"
                     >
@@ -64,22 +55,18 @@ const Footer = () => {
               <h4 className="font-display font-bold text-foreground mb-4">Support</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
+                  <a
+                    href="https://www.modeiptv.ca/iptv-installation-tutorials/"
+                    className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors"
+                  >
                     Installation Guide
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
-                    Troubleshooting
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
-                    Device Compatibility
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
+                  <a
+                    href="https://www.modeiptv.ca/terms-and-general-conditions/"
+                    className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors"
+                  >
                     Terms of Service
                   </a>
                 </li>
@@ -94,7 +81,7 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
                   <MessageCircle className="w-4 h-4 text-christmas-gold" />
-                  <a 
+                  <a
                     href="https://api.whatsapp.com/send/?phone=15594826660"
                     target="_blank"
                     rel="noopener noreferrer"
