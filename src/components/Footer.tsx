@@ -11,7 +11,7 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 const Footer = () => {
   const highlights = [
-    { icon: Tv, label: "15,000+ Channels" },
+    { icon: Tv, label: "30,000+ Channels" },
     { icon: Shield, label: "99.9% Uptime" },
     { icon: Headphones, label: "24/7 Support" },
     { icon: Clock, label: "Instant Activation" },
