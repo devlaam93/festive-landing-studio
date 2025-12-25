@@ -70,13 +70,13 @@ const PricingSection = () => {
       duration: '12 Months',
       price: '39.99',
       originalPrice: '119',
-      discount: '66%',
+      discount: '80%',
       link: 'https://order.modeiptv.ca/step/checkout-12-months-iptv-subscriptions-2/'
     }, {
       duration: '24 Months',
       price: '79.99',
       originalPrice: '199',
-      discount: '60%',
+      discount: '80%',
       link: 'https://order.modeiptv.ca/step/checkout-24-month-iptv-subscriptions-2/'
     }]
   }, {
