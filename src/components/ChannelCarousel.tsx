@@ -191,7 +191,7 @@ const ChannelCarousel = () => {
           <div className="container mx-auto px-4 mt-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {[{
-              value: '15,000+',
+              value: '30,000+',
               label: 'Live Channels',
               emoji: '📺'
             }, {
