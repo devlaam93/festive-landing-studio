@@ -118,7 +118,7 @@ const PricingSection = () => {
         <ScrollReveal animation="fade-up" duration={700}>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block px-4 py-2 rounded-full bg-christmas-red/10 text-christmas-red text-sm font-semibold mb-4">
-              🎄 Holiday Special - Up to 66% OFF
+              🎄 Holiday Special - Up to 80% OFF
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black mb-6">
               Choose Your <span className="text-christmas-gold">Perfect Plan</span>
