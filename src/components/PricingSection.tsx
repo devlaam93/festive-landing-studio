@@ -90,14 +90,14 @@ const PricingSection = () => {
       duration: '12 Months',
       price: '59.99',
       originalPrice: '179',
-      discount: '66%',
+      discount: '80%',
       link: 'https://order.modeiptv.ca/step/checkout-12-months-iptv-premium-subscriptions-2/',
       popular: true
     }, {
       duration: '24 Months',
       price: '99.99',
       originalPrice: '259',
-      discount: '61%',
+      discount: '80%',
       link: 'https://order.modeiptv.ca/step/checkout-24-months-iptv-premium-subscriptions-2/'
     }]
   }];
