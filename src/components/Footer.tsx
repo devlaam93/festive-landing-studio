@@ -70,27 +70,37 @@ const Footer = () => {
 
           {/* Contact Cards */}
           <ScrollReveal animation="fade-up" delay={200} duration={500}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <a 
                 href="https://api.whatsapp.com/send/?phone=15594826660" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group p-5 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-christmas-gold/50 hover:bg-card/80 transition-all duration-300"
+                className="group p-4 sm:p-5 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-christmas-gold/50 hover:bg-card/80 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-christmas-gold/20 to-christmas-gold/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <WhatsAppIcon className="w-6 h-6 text-christmas-gold" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-christmas-gold/20 to-christmas-gold/5 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                  <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6 text-christmas-gold" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-1">WhatsApp</h4>
-                <p className="text-sm text-muted-foreground">+1 559 482 6660</p>
+                <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">WhatsApp</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground">+1 559 482 6660</p>
               </a>
 
-
-              <div className="group p-5 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-christmas-gold/50 hover:bg-card/80 transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-christmas-gold/20 to-christmas-gold/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <MapPin className="w-6 h-6 text-christmas-gold" />
+              <a 
+                href="mailto:support@modeiptv.ca"
+                className="group p-4 sm:p-5 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-christmas-gold/50 hover:bg-card/80 transition-all duration-300"
+              >
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-christmas-gold/20 to-christmas-gold/5 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-christmas-gold" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-1">Location</h4>
-                <p className="text-sm text-muted-foreground">Toronto, Canada 🇨🇦</p>
+                <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Email</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground break-all">support@modeiptv.ca</p>
+              </a>
+
+              <div className="group p-4 sm:p-5 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-christmas-gold/50 hover:bg-card/80 transition-all duration-300">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-christmas-gold/20 to-christmas-gold/5 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-christmas-gold" />
+                </div>
+                <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Location</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground">Toronto, Canada 🇨🇦</p>
               </div>
             </div>
           </ScrollReveal>
