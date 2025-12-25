@@ -64,7 +64,7 @@ const Header = () => {
 
             {/* CTA Button - Desktop only */}
             <div className="hidden lg:block">
-              <a href="#pricing">
+              <a href="https://api.whatsapp.com/send/?phone=15594826660&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
                 <Button variant="hero" size="lg">
                   🎄 Start Free Trial
                 </Button>
@@ -74,7 +74,7 @@ const Header = () => {
             {/* Tablet & Mobile: CTA + Menu Button */}
             <div className="flex items-center gap-3 lg:hidden">
               {/* CTA Button - Tablet */}
-              <a href="#pricing" className="hidden sm:block">
+              <a href="https://api.whatsapp.com/send/?phone=15594826660&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="hidden sm:block">
                 <Button variant="hero" size="sm">
                   🎄 Start Free Trial
                 </Button>
@@ -105,7 +105,7 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <a href="#pricing">
+              <a href="https://api.whatsapp.com/send/?phone=15594826660&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
                 <Button variant="hero" size="lg" className="w-full mt-2">
                   🎄 Start Free Trial
                 </Button>

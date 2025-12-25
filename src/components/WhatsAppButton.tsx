@@ -1,7 +1,7 @@
 import { Phone } from 'lucide-react';
 
 const WhatsAppButton = () => {
-  const whatsappNumber = "+1234567890"; // Replace with actual number
+  const whatsappNumber = "+15594826660";
   const message = "Hello! I'm interested in MODE IPTV subscription.";
   
   const handleClick = () => {
