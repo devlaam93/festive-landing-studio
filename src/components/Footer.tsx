@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-christmas-red via-christmas-gold to-christmas-green" />
 
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
           {/* Brand */}
           <ScrollReveal animation="fade-up" delay={0} duration={500}>
             <div>
@@ -31,64 +31,6 @@ const Footer = () => {
                   Chat with Us
                 </Button>
               </a>
-            </div>
-          </ScrollReveal>
-
-          {/* Quick Links */}
-          <ScrollReveal animation="fade-up" delay={100} duration={500}>
-            <div>
-              <h4 className="font-display font-bold text-foreground mb-5">Quick Links</h4>
-              <ul className="space-y-3">
-                <li>
-                  <a href="#features" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a href="#pricing" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
-                    Pricing Plans
-                  </a>
-                </li>
-                <li>
-                  <a href="#channels" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
-                    Channel List
-                  </a>
-                </li>
-                <li>
-                  <a href="#faq" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
-                    FAQ
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </ScrollReveal>
-
-          {/* Support */}
-          <ScrollReveal animation="fade-up" delay={200} duration={500}>
-            <div>
-              <h4 className="font-display font-bold text-foreground mb-5">Support</h4>
-              <ul className="space-y-3">
-                <li>
-                  <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
-                    Installation Guide
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
-                    Device Compatibility
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
-                    Troubleshooting
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
-                    Contact Support
-                  </a>
-                </li>
-              </ul>
             </div>
           </ScrollReveal>
 
