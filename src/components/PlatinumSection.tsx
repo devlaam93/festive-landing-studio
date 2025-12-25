@@ -8,7 +8,7 @@ const PlatinumSection = () => {
     price: '69.99',
     originalPrice: '139.99',
     perMonth: '11.67',
-    link: 'https://order.modeiptv.ca/step/checkout-6-months-platinum/'
+    link: 'https://order.modeiptv.ca/step/checkout-6-months-iptv-premium-subscriptions-2/'
   }, {
     duration: '12',
     unit: 'Months',
@@ -16,7 +16,7 @@ const PlatinumSection = () => {
     originalPrice: '199.99',
     perMonth: '7.50',
     popular: true,
-    link: 'https://order.modeiptv.ca/step/checkout-12-months-platinum/'
+    link: 'https://order.modeiptv.ca/step/checkout-12-months-iptv-premium-subscriptions-3/'
   }];
   const allFeatures = ['🇨🇦 & 🇺🇸 Exclusive Content', '+35,000 Live Channels', '+130K Movies & Series', '8K/4K/UHD/FHD Quality', 'Netflix, Prime, Disney+', 'All Sports Channels', 'Free Hotiptv & Ibo Apps', 'Anti-Freeze™ 9.8 Tech', 'VPN Protection', '24/7 Support', 'Instant Activation', '7-Day Money Back'];
   return <section id="platinum" className="py-16 md:py-24 relative pt-[96px]">
