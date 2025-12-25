@@ -36,7 +36,7 @@ const PlatinumSection = () => {
             Canada & USA Only 🇨🇦 🇺🇸
           </h2>
           <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-3 text-sm md:text-base">
-            <span className="text-christmas-gold font-semibold">Available only as part of our Black Friday offer.</span> This package offers a large selection of platinum Canadian and American channels, with advanced features and ultra-high streaming quality.
+            <span className="text-christmas-gold font-semibold">Available only as part of our Christmas offer.</span> This package offers a large selection of platinum Canadian and American channels, with advanced features and ultra-high streaming quality.
           </p>
           <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-10 text-sm md:text-base">
             Includes 4K and even 8K channels, exclusive sports, movies, series, and a powerful VOD library — all optimized for fast, stable performance. If you want more options, more quality, and more Platinum channels, this is the perfect choice.
