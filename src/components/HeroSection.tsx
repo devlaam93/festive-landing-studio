@@ -61,8 +61,7 @@ const HeroSection = () => {
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-slide-up" style={{
           animationDelay: '0.3s'
-        }}>
-            <Gift className="inline w-5 h-5 text-christmas-gold mr-2" />
+        }}>Get 1 Month FREE with any subscription! Premium 4K streaming, 30,000+ channels, and unlimited entertainment.<Gift className="inline w-5 h-5 text-christmas-gold mr-2" />
             Get <span className="text-christmas-gold font-semibold">1 Month FREE</span> with any subscription!
             Premium 4K streaming, 15,000+ channels, and unlimited entertainment.
           </p>
