@@ -118,7 +118,7 @@ const ChannelCarousel = () => {
               All Your <span className="text-christmas-gold">Favorites</span> In One Place
             </h2>
             <p className="text-muted-foreground">
-              🎄 Stream content from all major platforms plus 15,000+ live channels
+              🎄 Stream content from all major platforms plus 30,000+ live channels
             </p>
           </div>
         </ScrollReveal>
