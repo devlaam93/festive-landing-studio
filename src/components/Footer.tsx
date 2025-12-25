@@ -19,53 +19,103 @@ const Footer = () => {
           {/* Brand */}
           <ScrollReveal animation="fade-up" delay={0} duration={500}>
             <div>
-              <div className="mb-4">
-                <img src={logo} alt="MODEIPTV Logo" className="h-10 w-auto" />
+              <div className="mb-6">
+                <img src={logo} alt="MODEIPTV Logo" className="h-12 w-auto" />
               </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                🎄 Premium IPTV service in Canada with 15,000+ channels, 4K streaming, and unmatched reliability.
+              <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                Canada's #1 IPTV provider with 15,000+ channels, 4K Ultra HD streaming, and 99.9% uptime guarantee.
               </p>
-              <div className="flex gap-3">
-                <a href="https://api.whatsapp.com/send/?phone=15594826660" target="_blank" rel="noopener noreferrer">
-                  <Button variant="glass" size="icon">
-                    <WhatsAppIcon className="w-5 h-5" />
-                  </Button>
-                </a>
-              </div>
+              <a href="https://api.whatsapp.com/send/?phone=15594826660" target="_blank" rel="noopener noreferrer">
+                <Button variant="glass" size="sm" className="gap-2">
+                  <WhatsAppIcon className="w-4 h-4" />
+                  Chat with Us
+                </Button>
+              </a>
             </div>
           </ScrollReveal>
 
           {/* Quick Links */}
           <ScrollReveal animation="fade-up" delay={100} duration={500}>
-            
+            <div>
+              <h4 className="font-display font-bold text-foreground mb-5">Quick Links</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#features" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a href="#pricing" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
+                    Pricing Plans
+                  </a>
+                </li>
+                <li>
+                  <a href="#channels" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
+                    Channel List
+                  </a>
+                </li>
+                <li>
+                  <a href="#faq" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+            </div>
           </ScrollReveal>
 
           {/* Support */}
           <ScrollReveal animation="fade-up" delay={200} duration={500}>
             <div>
-              
-              
+              <h4 className="font-display font-bold text-foreground mb-5">Support</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
+                    Installation Guide
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
+                    Device Compatibility
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
+                    Troubleshooting
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
+                    Contact Support
+                  </a>
+                </li>
+              </ul>
             </div>
           </ScrollReveal>
 
           {/* Contact */}
           <ScrollReveal animation="fade-up" delay={300} duration={500}>
             <div>
-              <h4 className="font-display font-bold text-foreground mb-4">Contact Us</h4>
-              <ul className="space-y-3">
+              <h4 className="font-display font-bold text-foreground mb-5">Get in Touch</h4>
+              <ul className="space-y-4">
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <WhatsAppIcon className="w-4 h-4 text-christmas-gold" />
+                  <div className="w-8 h-8 rounded-full bg-christmas-gold/20 flex items-center justify-center">
+                    <WhatsAppIcon className="w-4 h-4 text-christmas-gold" />
+                  </div>
                   <a href="https://api.whatsapp.com/send/?phone=15594826660" target="_blank" rel="noopener noreferrer" className="hover:text-christmas-gold transition-colors">
-                    WhatsApp: +1 559 482 6660
+                    +1 559 482 6660
                   </a>
                 </li>
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <Mail className="w-4 h-4 text-christmas-gold" />
+                  <div className="w-8 h-8 rounded-full bg-christmas-gold/20 flex items-center justify-center">
+                    <Mail className="w-4 h-4 text-christmas-gold" />
+                  </div>
                   <span>support@modeiptv.ca</span>
                 </li>
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <MapPin className="w-4 h-4 text-christmas-gold" />
-                  <span>Canada 🇨🇦</span>
+                  <div className="w-8 h-8 rounded-full bg-christmas-gold/20 flex items-center justify-center">
+                    <MapPin className="w-4 h-4 text-christmas-gold" />
+                  </div>
+                  <span>Toronto, Canada 🇨🇦</span>
                 </li>
               </ul>
             </div>
@@ -76,7 +126,7 @@ const Footer = () => {
         <ScrollReveal animation="fade" delay={400} duration={500}>
           <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} MODEIPTV. All rights reserved. 🎄 Happy Holidays!
+              © {new Date().getFullYear()} MODEIPTV. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
@@ -84,6 +134,9 @@ const Footer = () => {
               </a>
               <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
                 Terms of Service
+              </a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
+                Refund Policy
               </a>
             </div>
           </div>
