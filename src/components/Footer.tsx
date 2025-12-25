@@ -70,7 +70,7 @@ const Footer = () => {
 
           {/* Contact Cards */}
           <ScrollReveal animation="fade-up" delay={200} duration={500}>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <a 
                 href="https://api.whatsapp.com/send/?phone=15594826660" 
                 target="_blank" 
@@ -84,13 +84,6 @@ const Footer = () => {
                 <p className="text-sm text-muted-foreground">+1 559 482 6660</p>
               </a>
 
-              <div className="group p-5 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-christmas-gold/50 hover:bg-card/80 transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-christmas-gold/20 to-christmas-gold/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Mail className="w-6 h-6 text-christmas-gold" />
-                </div>
-                <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                <p className="text-sm text-muted-foreground">support@modeiptv.ca</p>
-              </div>
 
               <div className="group p-5 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-christmas-gold/50 hover:bg-card/80 transition-all duration-300">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-christmas-gold/20 to-christmas-gold/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
